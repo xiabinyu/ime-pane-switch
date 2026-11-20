@@ -1,0 +1,62 @@
+{
+  "name": "ime-pane-switch",
+  "displayName": "IME Pane Switch",
+  "description": "Switch Windows IME per VS Code pane: editor/terminal English, Copilot Chat Chinese.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "imePaneSwitch.toEditor",
+        "title": "IME: Focus Editor (English)"
+      },
+      {
+        "command": "imePaneSwitch.toChat",
+        "title": "IME: Focus Chat Input (Chinese)"
+      },
+      {
+        "command": "imePaneSwitch.toTerminal",
+        "title": "IME: Focus Terminal (English)"
+      },
+      {
+        "command": "imePaneSwitch.navigate",
+        "title": "IME: Run Navigation Command, then Set IM"
+      }
+    ],
+    "configuration": {
+      "title": "IME Pane Switch",
+      "properties": {
+        "imePaneSwitch.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Switch the input method when entering the editor or Copilot Chat."
+        },
+        "imePaneSwitch.englishIM": {
+          "type": "string",
+          "default": "1033",
+          "description": "Input method ID used for the editor (1033 = English US)."
+        },
+        "imePaneSwitch.chatIM": {
+          "type": "string",
+          "default": "2052",
+          "description": "Input method ID used for Copilot Chat (2052 = Chinese Simplified, e.g. Microsoft Pinyin)."
+        },
+        "imePaneSwitch.switchIMCmd": {
+          "type": "string",
+          "default": "C:\\bin\\im-select.exe {im}",
+          "description": "Command that switches the input method. {im} is replaced with the input method ID (same as VSCodeVim's switchIMCmd)."
+        }
+      }
+    }
+  }
+}
