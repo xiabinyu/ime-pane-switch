@@ -1,0 +1,74 @@
+{
+    "chat.mcp.gallery.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true,
+    "chat.viewSessions.orientation": "stacked",
+    "iar-build.iarInstallDirectories": [
+        "/opt/iarsystems",
+        "/opt/iar",
+        "C:\\Program Files\\IAR Systems",
+        "C:\\Program Files (x86)\\IAR Systems",
+        "C:\\iar",
+        "c:\\iar\\ewarm-10.10.2"
+    ],
+    "git.confirmSync": false,
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": ["editor.action.showContextMenu"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["github.copilot.chat.attachSelection","workbench.action.chat.open"]
+        },
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": ["editor.action.showContextMenu"]
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+           {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        }
+    ],
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "MATLAB.matlabConnectionTiming": "never",
+    "vim.autoSwitchInputMethod.defaultIM": "1033",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\\\bin\\\\im-select.exe",
+    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\\\bin\\\\im-select.exe {im}",
+    "chat.tools.terminal.autoApprove": {
+        "/^New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\SESA869039\\\\OneDrive - Schneider Electric\\\\Work\\\\001_AFE\\\\Git_Local\\\\ime-pane-switch\"$/": true,
+        "/^Out-Null$/": true,
+        "/^Test-Path \"C:\\\\Users\\\\SESA869039\\\\OneDrive - Schneider Electric\\\\Work\\\\001_AFE\\\\Git_Local\\\\ime-pane-switch\"$/": true
+    },
+    "imePaneSwitch.switchIMCmd": "C:\\\\bin\\\\im-select.exe {im}",
+    "vim.autoSwitchInputMethod.enable": true
+}

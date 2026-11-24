@@ -1,0 +1,15 @@
+iarsystems.iar-build
+iarsystems.iar-login
+local.ime-pane-switch
+mathworks.language-matlab
+mhutchie.git-graph
+ms-vscode.cmake-tools
+ms-vscode.cpp-devtools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.powershell
+openai.chatgpt
+openai.codex-audio
+vizards.deepseek-v4-for-copilot
+vscodevim.vim
