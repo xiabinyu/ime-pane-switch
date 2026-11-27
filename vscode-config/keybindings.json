@@ -9,7 +9,95 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
-    } ,
+    },
+    {
+        "key": "ctrl+b",
+        "command": "latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "overleaf-workshop.compileManager.compile",
+        "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-overleaf-workshop.compileManager.compile",
+        "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "latex-workshop.synctex",
+        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-latex-workshop.synctex",
+        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "overleaf-workshop.compileManager.syncCode",
+        "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-overleaf-workshop.compileManager.syncCode",
+        "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "noteMultiCursor.deleteLeft",
+        "when": "config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook' && notebookMultiSelectCursorState == '1' || config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook' && notebookMultiSelectCursorState == '2'"
+    },
+    {
+        "key": "backspace",
+        "command": "-noteMultiCursor.deleteLeft",
+        "when": "config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook' && notebookMultiSelectCursorState == '1' || config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook' && notebookMultiSelectCursorState == '2'"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.action.customizeLayout"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "imePaneSwitch.toChat"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "imePaneSwitch.toEditor"
+    },
+    {
+        "key": "ctrl+alt+t",
+        "command": "imePaneSwitch.toTerminal"
+    },
     {
         "key": "ctrl+w h",
         "command": "imePaneSwitch.navigate",
@@ -36,5 +124,5 @@
         "command": "imePaneSwitch.navigate",
         "args": { "command": "workbench.action.navigateRight", "im": "1033" },
         "when": "!editorTextFocus"
-    },
+    }
 ]

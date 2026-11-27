@@ -62,13 +62,344 @@
     ],
     "MATLAB.matlabConnectionTiming": "never",
     "vim.autoSwitchInputMethod.defaultIM": "1033",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\\\bin\\\\im-select.exe",
-    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\\\bin\\\\im-select.exe {im}",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Bin\\im-select.exe",
+    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Bin\\im-select.exe {im}",
     "chat.tools.terminal.autoApprove": {
         "/^New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\SESA869039\\\\OneDrive - Schneider Electric\\\\Work\\\\001_AFE\\\\Git_Local\\\\ime-pane-switch\"$/": true,
         "/^Out-Null$/": true,
         "/^Test-Path \"C:\\\\Users\\\\SESA869039\\\\OneDrive - Schneider Electric\\\\Work\\\\001_AFE\\\\Git_Local\\\\ime-pane-switch\"$/": true
     },
-    "imePaneSwitch.switchIMCmd": "C:\\\\bin\\\\im-select.exe {im}",
-    "vim.autoSwitchInputMethod.enable": true
+    "imePaneSwitch.enable": true,
+    "imePaneSwitch.englishIM": "1033",
+    "imePaneSwitch.chatIM": "2052",
+    "imePaneSwitch.switchIMCmd": "C:\\Bin\\im-select.exe {im}",
+    "vim.autoSwitchInputMethod.enable": false,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex-dvi",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--output-format=dvi",
+                "-output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex-getfig",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--output-format=dvi",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "dvips",
+            "command": "dvips",
+            "args": [
+                "./%OUTDIR%/%DOCFILE%.dvi",
+                "-o",
+                "./%OUTDIR%/%DOCFILE%.ps"
+            ]
+        },
+        {
+            "name": "ps2pdf",
+            "command": "ps2pdf",
+            "args": [
+                "./%OUTDIR%/%DOCFILE%.ps",
+                "./%OUTDIR%/%DOCFILE%.pdf"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=build",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=build",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdftoppm",
+            "command": "pdftoppm",
+            "args": [
+                "-png",
+                "%DOCFILE%.pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "--shell-escape",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "makeindex",
+            "command": "makeindex",
+            "args": [
+                "./build/%DOCFILE%.nlo",
+                "-s",
+                "nomencl.ist",
+                "-o",
+                "./build/%DOCFILE%.nls"
+            ]
+        },
+        {
+            "name": "dvipng",
+            "command": "dvipng",
+            "args": [
+                "%DOCFILE%.dvi"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "TEST",
+            "tools": [
+                "dvips"
+            ]
+        },
+        {
+            "name": "PDFLaTeX(DVI)",
+            "tools": [
+                "pdflatex-dvi"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "LuaLaTeX",
+            "tools": [
+                "lualatex"
+            ]
+        },
+        {
+            "name": "LaTeX",
+            "tools": [
+                "latex"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "getpng",
+            "tools": [
+                "xelatex",
+                "pdftoppm"
+            ]
+        },
+        {
+            "name": "pdflatex(dvi,quick)",
+            "tools": [
+                "pdflatex-dvi",
+                "dvips",
+                "ps2pdf"
+            ]
+        },
+        {
+            "name": "pdflatex(dvi,whole)",
+            "tools": [
+                "pdflatex-dvi",
+                "makeindex",
+                "bibtex",
+                "pdflatex-dvi",
+                "pdflatex-dvi",
+                "dvips",
+                "ps2pdf"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "a",
+                "a"
+            ],
+            "after": [
+                "<right>"
+            ]
+        },
+        {
+            "before": [
+                "h",
+                "h"
+            ],
+            "after": [
+                "<left>"
+            ]
+        }
+    ],
+    "vim.commandLineModeKeyBindings": [],
+    "git.enableSmartCommit": true,
+    "settingsSync.ignoredExtensions": [
+        "valentjn.vscode-ltex",
+        "mathematic.vscode-latex"
+    ],
+    "workbench.preferredDarkColorTheme": "Light Modern",
+    "latex-workshop.linting.chktex.enabled": false,
+    "editor.minimap.enabled": false,
+    "git.openRepositoryInParentFolders": "always",
+    "C_Cpp.default.compilerPath": "",
+    "latex-workshop.view.outline.sync.viewer": true,
+    "latex-workshop.latex.outDir": "./build",
+    "latex-workshop.docker.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "cSpell.language": "en",
+    "cSpell.enableFiletypes": [
+        "latex",
+        "tex",
+        "bib"
+    ],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.ignoreRegExpList": [
+        "\\\\citep?\\{[^}]*\\}",
+        "\\\\ref\\{[^}]*\\}",
+        "\\\\label\\{[^}]*\\}",
+        "\\$[^$]*\\$"
+    ],
+    "cSpell.enabledSchemes": {
+        "comment": true,
+        "file": true,
+        "gist": true,
+        "repo": true,
+        "sftp": true,
+        "untitled": true,
+        "vscode-notebook-cell": true,
+        "vscode-scm": true,
+        "vscode-userdata": true,
+        "vscode-vfs": true,
+        "vsls": true,
+        "overleaf-workshop": true
+    },
+    "chatgpt.localeOverride": "zh-CN"
 }

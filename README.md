@@ -48,7 +48,7 @@
 
 ## 行为
 
-- 运行 `IME: Focus Chat Input (Chinese)`：切换为 `chatIM`，并把焦点移到 Chat 输入框。
+- 运行 `IME: Focus Chat Input (Chinese)`：打开并聚焦 Chat 输入框，再切换为 `chatIM`。
 - 运行 `IME: Focus Editor (English)`：切换为 `englishIM`，并把焦点移到编辑器。
 - 用鼠标点击编辑器、或切换到其他编辑器标签页时：切换为 `englishIM`。
 - 不区分 VSCodeVim 的模式，进入编辑器一律是英文（包括 Insert 模式）。
@@ -61,4 +61,3 @@
 
 - VS Code 没有公开的“Chat 窗格获得焦点”事件，所以鼠标点击 Chat 输入框不会自动切中文，需要用快捷键命令进入 Chat。
 - 鼠标事件依赖光标选区变化。只点击而不移动光标的情况不会触发切换。
-- 命令 `workbench.action.chat.focusInput` 的 ID 随 VS Code 版本可能变化。如果快捷键没有把焦点移到 Chat，请在快捷键设置中搜索 “chat focus” 找到正确的命令 ID，并修改 `extension.js`。

@@ -1,5 +1,9 @@
+fabiospampinato.vscode-diff
+franneck94.c-cpp-runner
+iamhyc.overleaf-workshop
 iarsystems.iar-build
 iarsystems.iar-login
+james-yu.latex-workshop
 local.ime-pane-switch
 mathworks.language-matlab
 mhutchie.git-graph
@@ -9,7 +13,13 @@ ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 ms-vscode.powershell
+ms-vscode.vscode-serial-monitor
+mshr-h.veriloghdl
 openai.chatgpt
 openai.codex-audio
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-cspell-bundled-dictionaries
+swyphcosmo.spellchecker
+vadimcn.vscode-lldb
 vizards.deepseek-v4-for-copilot
 vscodevim.vim

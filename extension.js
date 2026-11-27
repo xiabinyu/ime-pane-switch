@@ -27,8 +27,8 @@ async function toEditor() {
 }
 
 async function toChat() {
+  await vscode.commands.executeCommand('workbench.action.chat.open');
   await switchIM(cfg().get('chatIM'));
-  await vscode.commands.executeCommand('workbench.action.chat.focusInput');
 }
 
 async function toTerminal() {
