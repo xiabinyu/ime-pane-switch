@@ -2,6 +2,10 @@
 
 在同一个 VS Code 窗口里按窗格切换 Windows 输入法：编辑器/终端用英文，Copilot Chat 用中文。
 
+## 新机器导入整套配置
+
+参阅 [restore-vscode-config 技能](ai-skill/restore-vscode-config/SKILL.md)，或让 Codex 读取该文件并执行。技能覆盖 `vscode-config/` 中的用户设置、快捷键、VSCodeVim 映射、扩展清单，以及 IME Pane Switch 和 `im-select` 的安装与验证。
+
 ## 前置条件
 
 1. 下载 [im-select](https://github.com/daipeihust/im-select)，放到 `C:\bin\im-select.exe`（不在该位置时，修改 `imePaneSwitch.switchIMCmd`）。
